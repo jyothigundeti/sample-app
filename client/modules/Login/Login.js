@@ -37,11 +37,15 @@ class Login extends React.Component {
       Email ID:
 			<input type="text" placeholder="Email" ref="email"/> <br/><br/>
       Password:
-			<input type="text" placeholder="Password" ref="password"/> <br/><br/>
+			<input type="password" placeholder="Password" ref="password"/> <br/><br/>
 			<input type="submit" onClick={this.loginDetails}/>
 			</form>  
 		);
 	}
 }
-
-export default connect()(Login);
+function mapStateToProps(state) {
+  return {
+    user: state.Login.user
+  };
+}
+export default connect(mapStateToProps)(Login);
