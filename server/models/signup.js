@@ -6,7 +6,7 @@ const signupSchema = new Schema({
   lname: { type: 'String', required: true },
   email: { type: 'String', required: true },
   password: { type: 'String', required: true },
-  mobile: { type: 'String', required: true },
+  mobile: { type: 'String', required: true, },
   dateAdded: { type: 'Date', default: Date.now, required: true },
 });
 

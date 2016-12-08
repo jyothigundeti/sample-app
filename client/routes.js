@@ -3,8 +3,8 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import App from './modules/App/App';
 import Signup from './modules/signup/signup';
-import Search from './modules/search/search';
 import Login from './modules/Login/Login';
+import Sms from './modules/smsmessage/sms';
 // require.ensure polyfill for node
 if (typeof require.ensure !== 'function') {
   require.ensure = function requireModule(deps, callback) {
@@ -58,10 +58,10 @@ export default (
       }}
     />
     <Route
-      path="/search"
+      path="/sms"
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
-          cb(null, require('./modules/search/search').default);
+          cb(null, require('./modules/smsmessage/sms').default);
         });
       }}
     />

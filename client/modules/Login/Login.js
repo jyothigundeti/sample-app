@@ -43,9 +43,5 @@ class Login extends React.Component {
 		);
 	}
 }
-function mapStateToProps(state) {
-  return {
-    user: state.Login.user
-  };
-}
-export default connect(mapStateToProps)(Login);
+
+export default connect()(Login);

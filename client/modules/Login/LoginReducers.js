@@ -22,7 +22,6 @@ const LoginReducers = (state = initialState, action) => {
 	}
 }
 
-// export const getPosts = state => state.signup.data;
 
 export default LoginReducers;
 

@@ -39,7 +39,7 @@ import { fetchComponentData } from './util/fetchData';
 import posts from './routes/post.routes';
 import signup from './routes/signup.routes';
 import login from './routes/login.routes';
-//import register from './routes/register.routes';
+import sms from './routes/sms.routes';
 import dummyData from './dummyData';
 import serverConfig from './config';
 
@@ -63,8 +63,8 @@ app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(morgan('dev'));
 app.use(Express.static(path.resolve(__dirname, '../dist')));
-app.use('/api', [posts, signup, login]);
-//app.set('superSecret', config.secret);
+app.use('/api', [posts, signup, login, sms]);
+app.set('superSecret', config.secret);
 
 // Render Initial HTML
 const renderFullPage = (html, initialState) => {

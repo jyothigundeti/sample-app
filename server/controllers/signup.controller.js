@@ -14,7 +14,7 @@ export function addUser(req, res) {
   newsignup.email = sanitizeHtml(newsignup.email);
   newsignup.password = sanitizeHtml(newsignup.password);
   newsignup.mobile = sanitizeHtml(newsignup.mobile);
-
+  
   newsignup.save((err, saved) => {
     if (err) {
       res.status(500).send(err);
